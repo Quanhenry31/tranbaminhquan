@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quân đẹp zai</title>
+    <!-- <link rel="stylesheet" href="asset/css/slyte.css">
+    <script src="./minh.js"></script> -->
+
+    <link type="text/css" rel="stylesheet" href="./asset/css/slyte.css" language="CSS">
+    <script type="text/javascrip" src="./minh.js" language="javascrip"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto+Condensed:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./asset/font/fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="icon" href="./imageedit_5_2766096756.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="blue">
+    
+</head>
+
+<body>
+    <video  loop muted plays-inline id="back-video">
+        <source src="./asset/css/video/Visuals - Your Name (4K)_Trimm.mp4" type="video/mp4">
+    </video>
+    <video  loop muted plays-inline id="back-video2">
+        <source src="./asset/css/video/Rainy Day 1 Live Wallpaper - Xanh Share ♥.mp4" type="video/mp4">
+    </video>
+
+    <div id="abc" class="hero">
+        <center>
+            <img class="avatar"
+                src="./anh moi.jpg"
+               
+                
+                width="150px">
+            <h3>Trần Bá Minh Quân</h3>
+            <p>Hí AE</p>
+            <button class="button" onclick="location.href='https://www.facebook.com/profile.php?id=100010934737654'">
+                <i class="fa-brands fa-facebook"></i>
+                Facebook
+            </button><br>
+
+            <button class="button" onclick="location.href='https://www.instagram.com/quanba33/'">
+                <i class="fab fa-instagram"></i>
+                Instagram</button><br>
+
+            <button class="button"
+                onclick="location.href='https://www.youtube.com/channel/UCE3tHOnZcg-ZTJeK5AqZOxQ/featured'">
+                <i class="fab fa-youtube"></i>
+                YouTube</button><br>
+
+            <button class="button"
+                onclick="location.href='https://i.pinimg.com/originals/ac/90/e0/ac90e039e86823543e8623cbc31516d7.jpg'">
+                <i class="fas fa-phone-alt"></i>
+                Liên hệ</button>
+        </center>
+    </div>
+    </div>
+    <div class="colums">
+        <div class="let-col">
+            <h1>Someday <br> The Boy</h1>
+        </div>
+        <div class="right-col">
+            <p>Click To Play</p>
+            <img src="./play.png" id="icon">
+        </div>
+    </div>
+
+
+    <audio id="song">
+        <source src="./asset/css/music/[MV]  -    [  OST Part.6 (ITAEWON CLASS OST Part.6)].mp3" type="audio/mp3">
+        <!-- ./asset/css/music/[MV]  -    [  OST Part.6 (ITAEWON CLASS OST Part.6)].mp3 -->
+        <!-- ./asset/css/music/y2mate.com - In The End Remix  Ngật Thằng Ngật Remix    Thằng Ngập Remix  NHẠC TRẺ TIKTOK HAY NHẤT 2022.mp3 -->
+    </audio>
+    <!-- loader  -->
+    <div class="loader-container">
+        <img src="./asset/css/video/亲亲 Peach Cat And Goma Sticker - 亲亲 Peach Cat And Goma Quan - Discover & Share GIFs.gif" alt="">
+    </div>
+    <script>
+        // phat nhac
+        var song = document.getElementById("song")
+        var icon = document.getElementById("icon")
+        var abc = document.getElementById("abc")
+        var payvideo = document.getElementById("back-video")
+        var payvideo2 = document.getElementById("back-video2")
+
+        payvideo2.play();
+        icon.onclick = function () {
+            if (song.paused) {
+                song.play();
+                icon.src = "./pause.png";
+                document.getElementById("abc").style.display = "none";
+                payvideo.play();
+                
+
+            } else {
+                song.pause();
+                icon.src = "./play.png";
+                document.getElementById("abc").style.display = "block";
+                payvideo.pause();
+            }
+        }
+        
+
+        function loader(){
+  document.querySelector('.loader-container').classList.add('fade-out');
+}
+function fadeOut(){
+  setInterval(loader, 3000);
+}
+
+window.onload = fadeOut();
+        
+    </script>
+    </div>
+</body>
+
+</html>
+
